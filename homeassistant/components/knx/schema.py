@@ -629,6 +629,8 @@ class LightSchema(KNXPlatformSchema):
     CONF_COLOR_STATE_ADDRESS = "color_state_address"
     CONF_COLOR_TEMP_ADDRESS = "color_temperature_address"
     CONF_COLOR_TEMP_STATE_ADDRESS = "color_temperature_state_address"
+    CONF_COLOR_TEMP_BRIGHTNESS_ADDRESS = "color_temperature_brightness_address"
+    CONF_COLOR_TEMP_BRIGHTNESS_STATE_ADDRESS = "color_temperature_brightness_state_address"
     CONF_COLOR_TEMP_MODE = "color_temperature_mode"
     CONF_HUE_ADDRESS = "hue_address"
     CONF_HUE_STATE_ADDRESS = "hue_state_address"
@@ -711,6 +713,8 @@ class LightSchema(KNXPlatformSchema):
                 vol.Optional(CONF_COLOR_STATE_ADDRESS): ga_list_validator,
                 vol.Optional(CONF_COLOR_TEMP_ADDRESS): ga_list_validator,
                 vol.Optional(CONF_COLOR_TEMP_STATE_ADDRESS): ga_list_validator,
+                vol.Optional(CONF_COLOR_TEMP_BRIGHTNESS_ADDRESS): ga_list_validator,
+                vol.Optional(CONF_COLOR_TEMP_BRIGHTNESS_STATE_ADDRESS): ga_list_validator,
                 vol.Optional(
                     CONF_COLOR_TEMP_MODE, default=DEFAULT_COLOR_TEMP_MODE
                 ): vol.All(vol.Upper, cv.enum(ColorTempModes)),
